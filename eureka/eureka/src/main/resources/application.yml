@@ -1,0 +1,31 @@
+server:
+  port: 8761
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+
+    #.1>fetch-registry: false
+    #Example Situation:
+    #Suppose you have Service D that you want to configure, but it does not need to find other services:
+
+    #Setting: fetch-registry: false
+    #This means Service D will not look up or try to get the list
+    #of other services (like Service A, B, or C) from the Eureka server.
+    #It won't care about the other services at all.
+
+
+    #2.register-with-eureka: false
+    #Example Situation: Now imagine you have another
+    #service called Service E that you want to configure as a standalone utility:
+    #
+    #Setting: register-with-eureka: false
+    #This means Service E will not register itself with the Eureka server.
+    #Other services will not be able to see or communicate with ServiceE through Eureka.
+
+
+    #Service D won't look for other services and will not care about
+    #what other services are available.
+
+    #Service E won’t let other services know it exists.
