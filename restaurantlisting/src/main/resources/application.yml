@@ -3,8 +3,8 @@ server:
 
 spring:
   application:
-    name: restaurantListing  # This name is responsible for service registering on eureka server.
-
+    name: RESTAURANT-LISTING
+  # This name is responsible for service registering on eureka server
   datasource:
     url: jdbc:mysql://localhost:3306/restaurantServiceDb?createDatabaseIfNotExist=true
     username: root

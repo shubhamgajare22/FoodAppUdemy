@@ -24,7 +24,10 @@ public class RestaurantServiceImpl implements RestaurentService {
     public List<RestaurantDto> fetchAllRestaurents() {
         List<Restaurant> restaurantList = restaurentRepo.findAll();
 
-        List<RestaurantDto> restaurantDtosList = restaurantList.stream()
+        System.out.println(restaurantList);
+
+        List<RestaurantDto> restaurantDtosList =
+                restaurantList.stream()
                 .map(restaurant -> RestaurentMapper.INSTANCE.mapRestaurantToRestaurantDto(restaurant))
                 .collect(Collectors.toList());
 
