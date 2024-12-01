@@ -21,7 +21,6 @@ public class Order {
 
     private List<FoodItems> foodItemsList;
 
-
     private Restaurent restaurent;
 
     private User user;
