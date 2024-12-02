@@ -6,14 +6,26 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Document("sequence")
+
+@Document(collection = "sequences")
 public class Sequence {
-
     @Id
-    private int id;
-
+    private String id;
     private int sequence;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public int getSequence() {
+        return sequence;
+    }
+
+    public void setSequence(int sequence) {
+        this.sequence = sequence;
+    }
 }
