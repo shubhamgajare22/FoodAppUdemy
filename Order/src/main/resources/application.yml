@@ -8,6 +8,8 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/orderDb
+      host: 27017
+      database: orderDb
       repositories:
         enabled: true
 
